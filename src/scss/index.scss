@@ -1,0 +1,155 @@
+@import "_mixin.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: rem(44px);
+    @include box_flex;
+    @include align;
+    background: #a65;
+    font-size: rem(15px);
+    padding: 0 rem(10px);
+    >input {
+        font-size: rem(16px);
+        width: rem(200px);
+        height: rem(28px);
+        border: 0;
+        outline-color: #a80;
+    }
+    >button {
+        width: rem(70px);
+        height: rem(30px);
+        font-size: rem(16px);
+        border: rem(1px) solid #333;
+    }
+}
+
+section>div {
+    flex-shrink: 0;
+}
+
+section {
+    width: 100%;
+    @include flex;
+    @include box_flex;
+    @include direction(column);
+    .sort-wrap {
+        width: 100%;
+        height: rem(50px);
+        font-size: rem(14px);
+        @include box_flex;
+        @include align;
+        @include justify;
+        >p {
+            @include flex;
+            text-align: center;
+            height: rem(48px);
+            line-height: rem(48px);
+            font-size: rem(16px);
+            background: #eee;
+        }
+        .all {
+            position: relative;
+            .type {
+                width: rem(150px);
+                background: #fff;
+                top: rem(40px);
+                left: 0;
+                z-index: 2;
+                position: absolute;
+                @include box_flex;
+                @include direction(column);
+                >b {
+                    border-bottom: rem(1px) solid #ddd;
+                }
+            }
+            .none {
+                display: none;
+            }
+        }
+    }
+    .list-wrap {
+        width: 100%;
+        overflow: hidden;
+        @include flex;
+        overflow: hidden;
+        position: relative;
+        >.list-con {
+            width: 100%;
+            min-height: 100%;
+            >p {
+                width: 100%;
+                height: rem(50px);
+                line-height: rem(50px);
+                font-size: rem(16px);
+                text-align: center;
+                background: #eee;
+                color: #466;
+                position: absolute;
+                left: 0;
+            }
+            >#pullDown {
+                top: rem(-50px)
+            }
+            >#pullUp {
+                bottom: rem(-50px)
+            }
+            >.dl-box {
+                width: 100%;
+                >dl {
+                    width: 100%;
+                    font-size: rem(14px);
+                    @include box_flex;
+                    @include align;
+                    padding: rem(10px);
+                    dt {
+                        width: rem(90px);
+                        height: rem(90px);
+                        margin-right: rem(10px);
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                dd {
+                    @include flex;
+                    font-size: rem(16px)
+                }
+            }
+            .table {
+                width: 100%;
+                @include box_flex;
+                @include align;
+                @include flexWrap(wrap);
+                >dl {
+                    width: 50%;
+                    font-size: rem(14px);
+                    @include box_flex;
+                    @include align;
+                    @include direction(column);
+                    padding: rem(10px);
+                    dt {
+                        width: rem(170px);
+                        height: rem(170px);
+                        margin-right: rem(10px);
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                dd {
+                    @include flex;
+                    font-size: rem(16px)
+                }
+            }
+        }
+    }
+}

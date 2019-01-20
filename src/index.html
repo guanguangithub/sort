@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <input type="text" class="search">
+            <button class="search-btn">搜索</button>
+        </header>
+        <section>
+            <div class="sort-wrap">
+                <p class="all">
+                    <span>综合排序</span>
+                    <span class="type none">
+                        <b class="asort">按价格升序</b>
+                        <b class="desort">按价格降序</b>
+                        <b class="credit">按信用排序</b>
+                    </span>
+                </p>
+                <p class="sale">销量排序</p>
+                <p class='changeView'>切换视图</p>
+            </div>
+
+            <div class="list-wrap">
+                <div class="list-con ">
+                    <p id="pullDown">下拉刷新</p>
+                    <div class="dl-box">
+                        <!-- <dl>
+                                <dt>
+                                    <img src="img/1.png" alt="">
+                                </dt>
+                                <dd>
+                                    <p>
+                                        百题百题百题百题百题百题百题百题百题百题
+                                    </p>
+                                    <p>
+                                        销量：<b>6789</b>
+                                    </p>
+                                    <p>
+                                        价格：<b>678</b>
+                                    </p>
+                                    <p>
+                                        信用：<b>78</b>
+                                    </p>
+                                </dd>
+                            </dl> -->
+
+                    </div>
+                    <p id="pullUp">下拉刷新</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/common/flexible.js"></script>
+    <script src="js/common/require.js" data-main="js/module/index.js"></script>
+</body>
+
+</html>

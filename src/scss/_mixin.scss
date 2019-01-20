@@ -1,0 +1,113 @@
+@mixin sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin absolute($direction) {
+    position: $direction;
+}
+
+@mixin height($height) {
+    height: $height;
+}
+
+@mixin hidden {
+    overflow: hidden;
+}
+
+@mixin center($center) {
+    text-align: $center;
+}
+
+@mixin box_flex {
+    display: flex;
+    display: -webkit-flex;
+}
+
+@mixin direction ($dir:row) {
+    //设置弹性盒方向
+    -webkit-flex-direction: $dir;
+    flex-direction: $dir;
+}
+
+@mixin flexWrap ($wrap:wrap) {
+    //换行
+    -webkit-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+}
+
+@mixin flexFlow ($dir:row, $wrap:wrap) {
+    //方向和换行的结合体
+    -webkit-flex-flow: $dir $wrap;
+    flex-flow: $dir $wrap;
+}
+
+@mixin justify ($justify:center) {
+    //水平居中
+    -webkit-justify-content: $justify;
+    justify-content: $justify;
+}
+
+@mixin align ($align:center) {
+    //垂直居中
+    -webkit-align-items: $align;
+    align-items: $align;
+}
+
+@mixin flex ($grow: 1, $shrink: 1, $basis: 0%) {
+    -webkit-flex: $grow $shrink $basis;
+    flex: $grow $shrink $basis;
+}
+
+@mixin flex_grow($val) {
+    -webkit-flex-grow: $val;
+    flex-grow: $val;
+}
+
+@mixin flex_shrink($val) {
+    -webkit-flex-shrink: $val;
+    flex-shrink: $val;
+}
+
+@mixin flex_basis($val) {
+    -webkit-flex-basis: $val;
+    flex-basis: $val;
+}
+
+@mixin cir($w) {
+    width: $w;
+    height: $w;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@mixin flexs($j:space-between) {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: $j;
+    -webkit-justify-content: $j;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+@mixin num($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+%text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@mixin ntext($n){
+   display:-webkit-box;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+  -webkit-line-clamp:$n;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
